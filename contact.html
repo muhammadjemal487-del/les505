@@ -2,52 +2,109 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Register - Ethio Academy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Ethio Excellence Academy</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary-bg: #0a192f; --accent-gold: #ffc107; --soft-white: #f1f4f8; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--soft-white); }
+        .navbar { background-color: var(--primary-bg) !important; border-bottom: 2px solid var(--accent-gold); padding: 12px 0; }
+        .contact-header { background: var(--primary-bg); color: white; padding: 60px 0; text-align: center; }
+        .contact-form-card { background: white; border-radius: 30px; padding: 40px; box-shadow: 0 15px 50px rgba(0,0,0,0.1); border: none; }
+        .info-card { background: var(--primary-bg); color: white; border-radius: 30px; padding: 40px; height: 100%; }
+        .map-container { border-radius: 25px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 4px solid white; height: 400px; }
+        .btn-gold { background: var(--accent-gold); color: #000; font-weight: 700; border-radius: 50px; border: none; padding: 15px; transition: 0.3s; width: 100%; }
+        .btn-gold:hover { background: #e0a800; }
+        footer { background: var(--primary-bg); color: white; padding: 40px 0; margin-top: 80px; text-align: center; }
+    </style>
 </head>
-<body style="background-color: #f1f4f8;">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="About.html">ETHIO ACADEMY</a>
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="About.html">About</a>
-                <a class="nav-link" href="Course.html">Courses</a>
-                <a class="nav-link active" href="Contact.html">Register</a>
+            <a class="navbar-brand fw-bold" href="index.html">ETHIO EXCELLENCE</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white px-3" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white px-3" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link text-white px-3" href="course.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link text-white px-3 fw-bold" href="contact.html" style="color: var(--accent-gold) !important;">Contact</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
+    <section class="contact-header">
+        <h1 class="fw-bold" style="font-family: 'Montserrat';">Get In Touch</h1>
+        <p class="opacity-75">Visit our campus or send us a message today.</p>
+    </section>
+
     <div class="container my-5">
-        <div class="card shadow p-5 border-0 rounded-4">
-            <h2 class="fw-bold mb-4">Student Registration</h2>
-            <form id="regForm" enctype="multipart/form-data">
-                <div class="row g-3">
-                    <div class="col-md-6"><label>Full Name</label><input type="text" name="full_name" class="form-control" required></div>
-                    <div class="col-md-6"><label>Email</label><input type="email" name="email" class="form-control" required></div>
-                    <div class="col-md-4"><label>Age</label><input type="number" name="age" class="form-control" required></div>
-                    <div class="col-md-4"><label>Stream</label>
-                        <select name="stream" class="form-select">
-                            <option>Computer Science</option>
-                            <option>Natural Science</option>
-                            <option>Social Science</option>
-                        </select>
+        <div class="row g-4">
+            <div class="col-lg-5">
+                <div class="info-card mb-4">
+                    <h3 class="fw-bold mb-4">Campus Location</h3>
+                    <div class="mb-4 d-flex">
+                        <span class="me-3 fs-4 text-warning">📍</span>
+                        <p class="small">Addis Ababa, Megenagna Area, Near Lex Plaza, Ethiopia.</p>
                     </div>
-                    <div class="col-md-4"><label>National ID Photo</label><input type="file" name="national_id" class="form-control" required></div>
-                    <div class="col-md-12"><button type="submit" class="btn btn-warning w-100 fw-bold">SUBMIT</button></div>
+                    <div class="mb-4 d-flex">
+                        <span class="me-3 fs-4 text-warning">📞</span>
+                        <p class="small">+251 911 22 33 44</p>
+                    </div>
+                    <div class="map-container mb-3">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.5532585974!2d38.7997!3d9.0192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85cef5ab402d%3A0x8467b6b037a24a40!2sAddis%20Ababa!5e0!3m2!1sen!2set!4v1700000000000!5m2!1sen!2set" 
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <a href="https://maps.google.com" target="_blank" class="btn btn-outline-warning w-100 rounded-pill py-2">Open in Google Maps</a>
                 </div>
-            </form>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="contact-form-card">
+                    <h3 class="fw-bold mb-4" style="color: var(--primary-bg);">Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="fw-bold small mb-2">Full Name</label>
+                                <input type="text" class="form-control" placeholder="Abebe Kebede" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="fw-bold small mb-2">Email Address</label>
+                                <input type="email" class="form-control" placeholder="example@mail.com" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="fw-bold small mb-2">Subject</label>
+                                <input type="text" class="form-control" placeholder="Admission or Information" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="fw-bold small mb-2">Your Message</label>
+                                <textarea class="form-control" rows="6" placeholder="Write your message here..." required></textarea>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-gold shadow">SEND MESSAGE NOW</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="successMsg" class="alert alert-success mt-3" style="display:none;">
+                        Message sent successfully! We will get back to you soon.
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
+    <footer>
+        <p>&copy; 2026 Ethio Excellence Academy. Empowering the Next Generation.</p>
+    </footer>
+
     <script>
-        document.getElementById('regForm').onsubmit = function(e) {
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            let formData = new FormData(this);
-            formData.append('register', '1');
-            fetch('admin.php', { method: 'POST', body: formData })
-            .then(res => res.text())
-            .then(data => { alert('Success!'); this.reset(); });
-        };
+            document.getElementById('successMsg').style.display = 'block';
+            this.reset();
+        });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
