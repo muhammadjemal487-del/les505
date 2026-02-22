@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Courses - Ethio Excellence Academy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg: #0a192f;
+            --accent-gold: #ffc107;
+            --soft-white: #f1f4f8;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--soft-white);
+        }
+
+        .navbar {
+            background-color: var(--primary-bg) !important;
+            border-bottom: 2px solid var(--accent-gold);
+            padding: 12px 0;
+        }
+
+        .page-header {
+            background: var(--primary-bg);
+            color: white;
+            padding: 80px 0;
+            border-radius: 0 0 50px 50px;
+            text-align: center;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            border: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: 0.4s;
+            height: 100%;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .course-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .btn-gold {
+            background: var(--accent-gold);
+            color: #000;
+            font-weight: 700;
+            border-radius: 50px;
+            border: none;
+            padding: 10px 20px;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        .btn-gold:hover {
+            background: #e0a800;
+        }
+
+        .btn-outline-dark {
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        .modal-content {
+            border-radius: 25px;
+            padding: 20px;
+        }
+
+        footer {
+            background: var(--primary-bg);
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">ETHIO EXCELLENCE</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white px-3" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white px-3 fw-bold" href="about.html"
+                            style="color: var(--accent-gold) !important;">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link text-white px-3" href="course.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link text-white px-3" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">ETHIO ACADEMY</a>
+            <div class="ms-auto">
+                <a href="contact.html" class="btn btn-outline-warning btn-sm">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1 class="fw-bold">Academic Programs</h1>
+        <p class="opacity-75">Choose your path and start your excellence journey today.</p>
+    </header>
+
+    <div class="container mt-n5" style="margin-top: -40px;">
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card course-card">
+                    <img src="nm.jfif" class="course-img" alt="Natural Science">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-center">Natural Science</h4>
+                        <p class="text-muted small text-center">Focus on Biology, Chemistry, and Physics for medical and
+                            engineering paths.</p>
+                        <div class="d-grid gap-2 mt-3">
+                            <a href="natural-science.html" class="btn btn-outline-dark">View Detail</a>
+                            <button class="btn-gold" data-bs-toggle="modal" data-bs-target="#regModal"
+                                onclick="setStream('Natural Science')">Register Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card course-card">
+                    <img src="gff.webp" class="course-img" alt="Computer Science">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-center">Computer Science</h4>
+                        <p class="text-muted small text-center">Learn coding, robotics, and software engineering in our
+                            modern labs.</p>
+                        <div class="d-grid gap-2 mt-3">
+                            <a href="computer-science.html" class="btn btn-outline-dark">View Detail</a>
+                            <button class="btn-gold" data-bs-toggle="modal" data-bs-target="#regModal"
+                                onclick="setStream('Computer Science')">Register Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card course-card">
+                    <img src="mn.jfif" class="course-img" alt="Social Science">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-center">Social Science</h4>
+                        <p class="text-muted small text-center">Understand history, economics, and leadership for a
+                            global career.</p>
+                        <div class="d-grid gap-2 mt-3">
+                            <a href="social-science.html" class="btn btn-outline-dark">View Detail</a>
+                            <button class="btn-gold" data-bs-toggle="modal" data-bs-target="#regModal"
+                                onclick="setStream('Social Science')">Register Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="regModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h4 class="fw-bold">Student Enrollment Form</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="admin.php" method="POST" enctype="multipart/form-data">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="small fw-bold">Full Name</label>
+                                <input type="text" name="full_name" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="small fw-bold">Email Address</label>
+                                <input type="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="small fw-bold">Phone</label>
+                                <input type="tel" name="phone" class="form-control" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="small fw-bold">Age</label>
+                                <input type="number" name="age" class="form-control" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="small fw-bold">Gender</label>
+                                <select name="gender" class="form-select">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="small fw-bold">Selected Stream</label>
+                                <input type="text" name="stream" id="modalStream" class="form-control bg-light"
+                                    readonly>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="small fw-bold">Grade Level</label>
+                                <select name="grade" class="form-select">
+                                    <option>Grade 9</option>
+                                    <option>Grade 10</option>
+                                    <option>Grade 11</option>
+                                    <option>Grade 12</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="small fw-bold">National ID (Photo)</label>
+                                <input type="file" name="national_id" class="form-control" accept="image/*" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="small fw-bold">Report Card (PDF/Image)</label>
+                                <input type="file" name="report_card" class="form-control" accept=".pdf,image/*"
+                                    required>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="small fw-bold">Short Introduction</label>
+                                <textarea name="intro" class="form-control" rows="3"
+                                    placeholder="Tell us about yourself..."></textarea>
+                            </div>
+
+                            <div class="col-12 mt-4">
+                                <button type="submit" name="register" class="btn-gold p-3">CONFIRM REGISTRATION</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Ethio Excellence Academy. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function setStream(name) {
+            document.getElementById('modalStream').value = name;
+        }
+    </script>
+</body>
+
+</html>

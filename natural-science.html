@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Science Details - Ethio Excellence</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg: #0a192f;
+            --accent-gold: #ffc107;
+            --soft-white: #f1f4f8;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--soft-white);
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.85)), url('https://source.unsplash.com/1600x900/?science,laboratory');
+            background-size: cover;
+            background-position: center;
+            height: 35vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .detail-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border: none;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+
+        .detail-img {
+            height: 280px;
+            width: 100%;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .subject-title {
+            color: var(--primary-bg);
+            font-weight: 800;
+            margin-bottom: 15px;
+            border-left: 5px solid var(--accent-gold);
+            padding-left: 15px;
+        }
+
+        .btn-apply {
+            background: var(--accent-gold);
+            color: #000;
+            font-weight: 800;
+            border-radius: 50px;
+            padding: 15px 60px;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn-apply:hover {
+            background: #e0a800;
+            transform: translateY(-3px);
+            color: #000;
+        }
+
+        footer {
+            background: var(--primary-bg);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Natural Science Curriculum</h1>
+            <p class="lead">Exploring Biology, Chemistry, Physics, and Mathematics.</p>
+        </div>
+    </section>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card detail-card">
+                    <img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&q=80&w=800"
+                        class="detail-img" alt="Biology">
+                    <div class="card-body p-4">
+                        <h3 class="subject-title">1. Biology</h3>
+                        <p class="text-muted">Biology is the study of life and living organisms. It explores the
+                            structure, growth, origin, evolution, and distribution of living things, including humans,
+                            plants, animals, and microorganisms.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card detail-card">
+                    <img src="ch.jfif" class="detail-img" alt="Chemistry">
+                    <div class="card-body p-4">
+                        <h3 class="subject-title">2. Chemistry</h3>
+                        <p class="text-muted">Chemistry investigates the properties, composition, and structure of
+                            matter. It examines how different substances interact, combine, and change to form new
+                            substances through chemical reactions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card detail-card">
+                    <img src="ph.jfif" class="detail-img" alt="Physics">
+                    <div class="card-body p-4">
+                        <h3 class="subject-title">3. Physics</h3>
+                        <p class="text-muted">Physics is the science of energy, motion, light, sound, and the
+                            fundamental interactions between matter. It is the key to understanding the laws that govern
+                            our universe.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card detail-card">
+                    <img src="m.png" class="detail-img" alt="Mathematics">
+                    <div class="card-body p-4">
+                        <h3 class="subject-title">4. Mathematics</h3>
+                        <p class="text-muted">While Mathematics is its own field, it serves as the essential tool in
+                            Natural Science. It is vital for the complex calculations and modeling required in Physics
+                            and Chemistry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <h4 class="fw-bold mb-4">Ready to Join Our Academy?</h4>
+            <a href="contact.html" class="btn-apply shadow">APPLY NOW</a>
+        </div>
+    </div>
+
+    <footer>
+        <p class="mb-0">© 2026 Ethio Excellence Academy | Natural Science Department</p>
+    </footer>
+
+</body>
+
+</html>

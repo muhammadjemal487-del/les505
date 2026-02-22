@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethio Excellence Academy | Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        :root {
+            --primary-bg: #0a192f;
+            --accent-gold: #ffc107;
+            --soft-white: #f1f4f8;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--soft-white);
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: var(--primary-bg) !important;
+            border-bottom: 2px solid var(--accent-gold);
+            padding: 12px 0;
+        }
+
+        .navbar-brand {
+            font-family: 'Montserrat';
+            font-weight: 800;
+            color: #fff !important;
+        }
+
+        /* New Layout: Text on Left, Image on Right */
+        .hero-section {
+            background-color: var(--primary-bg);
+            padding: 80px 0;
+            border-radius: 0 0 50px 50px;
+            color: white;
+            min-height: 550px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-img-container {
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: -20px 20px 0px rgba(255, 193, 7, 0.2);
+            /* Gold accent shadow */
+            transition: 0.5s;
+        }
+
+        .hero-img-container:hover {
+            transform: scale(1.02);
+        }
+
+        .hero-img-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .course-section {
+            margin-top: -60px;
+            position: relative;
+            z-index: 100;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            border: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: 0.4s ease;
+            height: 100%;
+        }
+
+        .course-card:hover {
+            transform: translateY(-15px);
+        }
+
+        .course-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .btn-gold {
+            background: var(--accent-gold);
+            color: #000;
+            font-weight: 700;
+            border-radius: 50px;
+            border: none;
+            padding: 12px 35px;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            border-bottom: 5px solid var(--accent-gold);
+            transition: 0.3s;
+        }
+
+        footer {
+            background: var(--primary-bg);
+            color: white;
+            padding: 60px 0;
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .text-success {
+            color: #0a192f;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">ETHIO ACADEMY</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white px-3" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white px-3" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link text-white px-3" href="course.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link text-white px-3" href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0 text-center text-lg-start">
+                    <h1 class="display-3 fw-bold animate__animated animate__fadeInLeft"
+                        style="font-family: 'Montserrat';">
+                        Ethio <span style="color: var(--accent-gold);">Excellence</span> Academy
+                    </h1>
+                    <p class="lead mb-4 animate__animated animate__fadeInLeft" style="animation-delay: 0.2s;">
+                        Where Tradition Meets Technology. <br>
+                        Nurturing the next generation of Ethiopian innovators.
+                    </p>
+                    <div class="animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                        <a href="contact.html" class="btn btn-gold">Join Our Academy</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 animate__animated animate__fadeInRight">
+                    <div class="hero-img-container">
+                        <img src="hero.jpg" alt="Academy Library and Technology">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container course-section">
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <div class="card course-card">
+                    <img src="https://images.pexels.com/photos/3735709/pexels-photo-3735709.jpeg" class="course-img"
+                        alt="Science">
+                    <div class="card-body p-4 text-center">
+                        <h4 class="fw-bold">Natural Science</h4>
+                        <p class="text-muted small">Explore Biology, Chemistry, and Physics with modern labs.</p>
+                        <a href="course.html" class="btn btn-sm btn-outline-dark rounded-pill px-4">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card course-card">
+                    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" class="course-img"
+                        alt="Tech">
+                    <div class="card-body p-4 text-center">
+                        <h4 class="fw-bold">Computer Science</h4>
+                        <p class="text-muted small">Master programming, robotics, and digital innovation.</p>
+                        <a href="course.html" class="btn btn-sm btn-outline-dark rounded-pill px-4">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card course-card">
+                    <img src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg"
+                        class="course-img" alt="Arts">
+                    <div class="card-body p-4 text-center">
+                        <h4 class="fw-bold">Social Science</h4>
+                        <p class="text-muted small">Lead with history, economics, and global perspectives.</p>
+                        <a href="course.html" class="btn btn-sm btn-outline-dark rounded-pill px-4">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5 py-5 text-center">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="stat-card shadow-sm">
+                    <h1>100%</h1>
+                    <p class="fw-bold text-muted">University Entrance</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-card shadow-sm">
+                    <h1 class="text-warning">20+</h1>
+                    <p class="fw-bold text-muted">Expert Educators</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-card shadow-sm">
+                    <h1 class="text-success">Smart</h1>
+                    <p class="fw-bold text-muted">Digital Classrooms</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <h3 class="fw-bold mb-2">ETHIO EXCELLENCE ACADEMY</h3>
+            <p class="small opacity-50">© 2026 Ethio Academy. Addis Ababa, Ethiopia.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

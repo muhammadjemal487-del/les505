@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science Details - Ethio Excellence</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg: #0a192f;
+            --accent-blue: #007bff;
+            --soft-white: #f1f4f8;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--soft-white);
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.85)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            height: 35vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .detail-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border: none;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+
+        .detail-img {
+            height: 280px;
+            width: 100%;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .subject-title {
+            color: var(--primary-bg);
+            font-weight: 800;
+            margin-bottom: 15px;
+            border-left: 5px solid var(--accent-blue);
+            padding-left: 15px;
+        }
+
+        .btn-apply {
+            background: var(--accent-blue);
+            color: #fff;
+            font-weight: 800;
+            border-radius: 50px;
+            padding: 15px 60px;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn-apply:hover {
+            background: #0056b3;
+            transform: translateY(-3px);
+            color: #fff;
+        }
+
+        footer {
+            background: var(--primary-bg);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Computer Science & IT</h1>
+            <p class="lead">Master Coding, Web Development, and Cybersecurity.</p>
+        </div>
+    </section>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card detail-card">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800"
+                        class="detail-img" alt="Programming">
+                    <div class="card-body p-4">
+                        <h3 class="subject-title">1. Software Development</h3>
+                        <p class="text-muted">Learn the logic behind modern applications. Our curriculum covers Python,
+                            Java, and C++, teaching students how to build robust software from scratch.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card detail-card">
+                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=800" class="detail-img"
+                        alt="Web Design">
+                    <div class="card-body p-4">
+                        <h3 class="subject-title">2. Web & UI/UX Design</h3>
+                        <p class="text-muted">Explore the art of creating beautiful and functional websites. Students
+                            learn HTML5, CSS3, JavaScript, and modern design tools like Figma.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card detail-card">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800" class="detail-img"
+                        alt="Cybersecurity">
+                    <div class="card-body p-4">
+                        <h3 class="subject-title">3. Networking & Security</h3>
+                        <p class="text-muted">Understand how data travels across the globe and how to protect it. Focus
+                            on network architecture, ethical hacking, and data encryption.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card detail-card">
+                    <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=800"
+                        class="detail-img" alt="Robotics">
+                    <div class="card-body p-4">
+                        <h3 class="subject-title">4. AI & Robotics</h3>
+                        <p class="text-muted">Step into the future with Artificial Intelligence. Students work on
+                            automation projects and learn the basics of machine learning and hardware integration.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <h4 class="fw-bold mb-4">Ready to Code the Future?</h4>
+            <a href="contact.html" class="btn-apply shadow">APPLY FOR TECH TRACK</a>
+        </div>
+    </div>
+
+    <footer>
+        <p class="mb-0">© 2026 Ethio Excellence Academy | Computer Science Department</p>
+    </footer>
+
+</body>
+
+</html>

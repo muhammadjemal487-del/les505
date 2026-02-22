@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - Ethio Excellence Academy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg: #0a192f;
+            --accent-gold: #ffc107;
+            --soft-white: #f1f4f8;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--soft-white);
+        }
+
+        .navbar {
+            background-color: var(--primary-bg) !important;
+            border-bottom: 2px solid var(--accent-gold);
+            padding: 12px 0;
+        }
+
+        .contact-header {
+            background: var(--primary-bg);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .contact-form-card {
+            background: white;
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-card {
+            background: var(--primary-bg);
+            color: white;
+            border-radius: 30px;
+            padding: 40px;
+            height: 100%;
+        }
+
+        .map-container {
+            border-radius: 20px;
+            overflow: hidden;
+            height: 250px;
+            border: 4px solid white;
+            margin-top: 20px;
+        }
+
+        .btn-gold {
+            background: var(--accent-gold);
+            color: #000;
+            font-weight: 800;
+            border-radius: 50px;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .btn-gold:hover {
+            background: #e0a800;
+            transform: translateY(-3px);
+        }
+
+        label {
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--primary-bg);
+            margin-bottom: 5px;
+        }
+
+        .section-title {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background: var(--primary-bg);
+            color: white;
+            padding: 30px 0;
+            margin-top: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container"><a class="navbar-brand fw-bold" href="#">ETHIO ACADEMY</a></div>
+    </nav>
+
+    <section class="contact-header">
+        <h1 class="fw-bold">Student Admission</h1>
+        <p class="opacity-75">Submit your details accurately.</p>
+    </section>
+
+    <div class="container my-5">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="info-card shadow">
+                    <h3 class="fw-bold mb-4">Our Campus</h3>
+                    <p class="small mb-2">📍 Addis Ababa, Ethiopia</p>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126115.11523413552!2d38.70426031206684!3d8.963176865267325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85cef5ab402d%3A0x8467b6b037a24d49!2sAddis%20Ababa!5e0!3m2!1sen!2set!4v1700000000000"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <div class="contact-form-card">
+                    <form id="regForm">
+                        <h5 class="section-title">Personal Info</h5>
+                        <div class="row g-3">
+                            <div class="col-md-6"><label>Full Name</label><input type="text" id="fullName"
+                                    name="full_name" class="form-control" required></div>
+                            <div class="col-md-6"><label>Email</label><input type="email" name="email"
+                                    class="form-control" required></div>
+                            <div class="col-md-6"><label>Phone</label><input type="tel" name="phone"
+                                    class="form-control" required></div>
+                            <div class="col-md-3"><label>Grade</label><select id="grade" name="grade"
+                                    class="form-select">
+                                    <option value="Grade 9">Grade 9</option>
+                                    <option value="Grade 10">Grade 10</option>
+                                    <option value="Grade 11">Grade 11</option>
+                                    <option value="Grade 12">Grade 12</option>
+                                </select></div>
+                            <div class="col-md-3"><label>Stream</label><select id="stream" name="stream"
+                                    class="form-select">
+                                    <option value="Natural Science">Natural Science</option>
+                                    <option value="Social Science">Social Science</option>
+                                    <option value="Computer Science">Computer Science</option>
+                                </select></div>
+
+                            <div class="col-md-12"><label>Result (%)</label><input type="number" step="0.1"
+                                    name="result_val" class="form-control" required></div>
+
+                            <div class="col-md-12"><label>Result Transcript (Photo)</label><input type="file"
+                                    name="result_photo" class="form-control" accept="image/*" required></div>
+
+                            <div class="col-md-12"><label>National ID Photo</label><input type="file" name="national_id"
+                                    class="form-control" accept="image/*" required></div>
+                            <div class="col-md-12"><label>Intro</label><textarea name="intro" class="form-control"
+                                    rows="3"></textarea></div>
+                        </div>
+
+                        <div id="successMessage" class="alert alert-success d-none mt-4 text-center fw-bold"
+                            role="alert" style="border-radius: 15px;">
+                            ✅ Success! Your registration has been submitted and sent to the Admin Dashboard.
+                        </div>
+
+                        <button type="submit" class="btn btn-gold mt-4 shadow">SUBMIT REGISTRATION</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-gold mt-4 shadow" onclick="window.location.href='index.html'">BACK TO HOME</button>
+
+    <script>
+        document.getElementById('regForm').onsubmit = function (e) {
+            e.preventDefault();
+
+            // ዳታውን ለአድሚን ገጽ እንዲሆን LocalStorage ላይ መመዝገብ
+            let students = JSON.parse(localStorage.getItem('eea_students')) || [];
+            const newStudent = {
+                name: document.getElementById('fullName').value,
+                grade: document.getElementById('grade').value,
+                stream: document.getElementById('stream').value
+            };
+            students.push(newStudent);
+            localStorage.setItem('eea_students', JSON.stringify(students));
+
+            // የስኬት ምልክት ማሳየት
+            let successBox = document.getElementById('successMessage');
+            successBox.classList.remove('d-none');
+
+            // ፎርሙን ክሊር ማድረግ
+            this.reset();
+
+            // ገጹን ወደ ላይ ከፍ አድርጎ መልዕክቱን እንዲያሳይ ማድረግ
+            successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        };
+    </script>
+</body>
+
+</html>
