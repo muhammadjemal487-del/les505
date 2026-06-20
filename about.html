@@ -9,64 +9,18 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="css/shared.css">
     <style>
-        :root {
-            --primary-bg: #0a192f;
-            --accent-gold: #ffc107;
-            --soft-white: #f1f4f8;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--soft-white);
-        }
-
-        .navbar {
-            background-color: var(--primary-bg) !important;
-            border-bottom: 2px solid var(--accent-gold);
-            padding: 12px 0;
-        }
-
         .hero-about {
             background: var(--primary-bg);
             color: white;
             padding: 80px 0;
         }
-
-        .stat-box {
-            background: white;
-            padding: 30px;
-            border-radius: 20px;
-            border-bottom: 5px solid var(--accent-gold);
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        footer {
-            background: var(--primary-bg);
-            color: white;
-            padding: 60px 0;
-            margin-top: 80px;
-            text-align: center;
-        }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">ETHIO EXCELLENCE</a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link text-white px-3" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-white px-3 fw-bold" href="about.html"
-                            style="color: var(--accent-gold) !important;">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link text-white px-3" href="course.html">Courses</a></li>
-                    <li class="nav-item"><a class="nav-link text-white px-3" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div id="shared-navbar"></div>
 
     <section class="hero-about text-center">
         <div class="container">
@@ -104,13 +58,14 @@
         </div>
     </div>
 
-    <footer>
-        <div class="container">
-            <h3 class="fw-bold mb-3">ETHIO EXCELLENCE ACADEMY</h3>
-            <p class="small opacity-50 px-5">Integrity. Innovation. Excellence.</p>
-            <p class="small mb-0 text-white-50">&copy; 2026 Ethio Excellence. All rights reserved.</p>
-        </div>
-    </footer>
+    <div id="shared-footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/components.js"></script>
+    <script>
+        renderNavbar("about");
+        renderFooter();
+    </script>
 </body>
 
 </html>
