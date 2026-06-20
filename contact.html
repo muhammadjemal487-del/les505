@@ -162,6 +162,10 @@
                             ✅ Success! Your registration has been submitted and sent to the Admin Dashboard.
                         </div>
 
+                        <div id="errorMessage" class="alert alert-danger d-none mt-4 text-center fw-bold"
+                            role="alert" style="border-radius: 15px;">
+                        </div>
+
                         <button type="submit" class="btn btn-gold mt-4 shadow">SUBMIT REGISTRATION</button>
                     </form>
                 </div>
@@ -174,24 +178,65 @@
         document.getElementById('regForm').onsubmit = function (e) {
             e.preventDefault();
 
-            // ዳታውን ለአድሚን ገጽ እንዲሆን LocalStorage ላይ መመዝገብ
-            let students = JSON.parse(localStorage.getItem('eea_students')) || [];
-            const newStudent = {
-                name: document.getElementById('fullName').value,
-                grade: document.getElementById('grade').value,
-                stream: document.getElementById('stream').value
-            };
-            students.push(newStudent);
-            localStorage.setItem('eea_students', JSON.stringify(students));
+            var successBox = document.getElementById('successMessage');
+            var errorBox = document.getElementById('errorMessage');
 
-            // የስኬት ምልክት ማሳየት
-            let successBox = document.getElementById('successMessage');
+            // Hide any previous status messages
+            successBox.classList.add('d-none');
+            errorBox.classList.add('d-none');
+
+            // Validate required fields before attempting storage
+            var fullName = document.getElementById('fullName');
+            var grade = document.getElementById('grade');
+            var stream = document.getElementById('stream');
+
+            if (!fullName || !grade || !stream) {
+                errorBox.textContent = 'Form elements could not be found. Please reload the page and try again.';
+                errorBox.classList.remove('d-none');
+                errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return;
+            }
+
+            if (!fullName.value.trim()) {
+                errorBox.textContent = 'Please enter your full name.';
+                errorBox.classList.remove('d-none');
+                errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return;
+            }
+
+            try {
+                // Read existing students from localStorage
+                var raw = localStorage.getItem('eea_students');
+                var students;
+                try {
+                    students = raw ? JSON.parse(raw) : [];
+                } catch (parseErr) {
+                    console.error('Corrupted student data in localStorage, resetting:', parseErr);
+                    students = [];
+                }
+
+                if (!Array.isArray(students)) {
+                    students = [];
+                }
+
+                var newStudent = {
+                    name: fullName.value.trim(),
+                    grade: grade.value,
+                    stream: stream.value
+                };
+                students.push(newStudent);
+                localStorage.setItem('eea_students', JSON.stringify(students));
+            } catch (storageErr) {
+                console.error('Failed to save registration data:', storageErr);
+                errorBox.textContent = 'Could not save your registration. Your browser storage may be full or disabled. Please try again or contact the academy directly.';
+                errorBox.classList.remove('d-none');
+                errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return;
+            }
+
+            // Show success only after data is persisted
             successBox.classList.remove('d-none');
-
-            // ፎርሙን ክሊር ማድረግ
             this.reset();
-
-            // ገጹን ወደ ላይ ከፍ አድርጎ መልዕክቱን እንዲያሳይ ማድረግ
             successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
         };
     </script>
