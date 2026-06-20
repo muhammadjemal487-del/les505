@@ -5,29 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Courses - Ethio Excellence Academy</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root { --primary-bg: #0a192f; --accent-gold: #ffc107; --soft-white: #f1f4f8; }
-        body { font-family: 'Poppins', sans-serif; background-color: var(--soft-white); }
-        .navbar { background-color: var(--primary-bg) !important; border-bottom: 2px solid var(--accent-gold); }
-        .page-header { background: var(--primary-bg); color: white; padding: 60px 0; text-align: center; }
-        .table-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
-        .btn-gold { background: var(--accent-gold); color: var(--primary-bg); font-weight: bold; border: none; padding: 12px 30px; border-radius: 8px; }
-        footer { background: var(--primary-bg); color: white; padding: 30px 0; text-align: center; margin-top: 50px; }
-    </style>
+    <link rel="stylesheet" href="css/shared.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="Index.html">ETHIO EXCELLENCE</a>
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="Index.html">Home</a>
-                <a class="nav-link active" href="Course.html">Courses</a>
-            </div>
-        </div>
-    </nav>
+    <div id="shared-navbar"></div>
 
     <div class="page-header">
         <h1 class="fw-bold">Academic Programs</h1>
@@ -79,7 +63,7 @@
                     <h3 class="fw-bold text-center mb-4">Online Registration</h3>
                     
                     <div id="successMsg" class="alert alert-success d-none">
-                        <h5 class="alert-heading fw-bold">✅ Registration Submitted!</h5>
+                        <h5 class="alert-heading fw-bold">Registration Submitted!</h5>
                         <p>Thank you for choosing Ethio Excellence. A confirmation email has been sent, and our team will contact you shortly.</p>
                     </div>
 
@@ -125,12 +109,14 @@
         </div>
     </div>
 
-    <footer>
-        <p>© 2026 Ethio Excellence Academy. All rights reserved.</p>
-    </footer>
+    <div id="shared-footer"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/components.js"></script>
     <script>
+        renderNavbar("courses");
+        renderFooter();
+
         function openReg(name) {
             document.getElementById('targetProgram').value = name;
             document.getElementById('registration-section').scrollIntoView({ behavior: 'smooth' });

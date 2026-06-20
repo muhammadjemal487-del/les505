@@ -9,82 +9,31 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="css/shared.css">
     <style>
-        :root {
-            --primary-bg: #0a192f;
-            --accent-blue: #007bff;
-            --soft-white: #f1f4f8;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--soft-white);
-        }
-
         .hero-section {
             background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.85)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2000');
-            background-size: cover;
-            background-position: center;
-            height: 35vh;
-            display: flex;
-            align-items: center;
-            color: white;
-            text-align: center;
-        }
-
-        .detail-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            margin-bottom: 30px;
-            border: none;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            height: 100%;
-        }
-
-        .detail-img {
-            height: 280px;
-            width: 100%;
-            object-fit: cover;
-            background-color: #eee;
         }
 
         .subject-title {
-            color: var(--primary-bg);
-            font-weight: 800;
-            margin-bottom: 15px;
-            border-left: 5px solid var(--accent-blue);
-            padding-left: 15px;
+            border-left-color: var(--accent-blue);
         }
 
         .btn-apply {
             background: var(--accent-blue);
             color: #fff;
-            font-weight: 800;
-            border-radius: 50px;
-            padding: 15px 60px;
-            text-decoration: none;
-            display: inline-block;
-            transition: 0.3s;
         }
 
         .btn-apply:hover {
             background: #0056b3;
-            transform: translateY(-3px);
             color: #fff;
-        }
-
-        footer {
-            background: var(--primary-bg);
-            color: white;
-            padding: 40px 0;
-            text-align: center;
         }
     </style>
 </head>
 
 <body>
 
+    <div id="shared-navbar"></div>
 
     <section class="hero-section">
         <div class="container">
@@ -150,10 +99,14 @@
         </div>
     </div>
 
-    <footer>
-        <p class="mb-0">© 2026 Ethio Excellence Academy | Computer Science Department</p>
-    </footer>
+    <div id="shared-footer"></div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/components.js"></script>
+    <script>
+        renderNavbar("courses");
+        renderFooter("Computer Science Department");
+    </script>
 </body>
 
 </html>
