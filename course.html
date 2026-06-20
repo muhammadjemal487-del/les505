@@ -83,6 +83,9 @@
                         <p>Thank you for choosing Ethio Excellence. A confirmation email has been sent, and our team will contact you shortly.</p>
                     </div>
 
+                    <div id="errorMsg" class="alert alert-danger d-none fw-bold">
+                    </div>
+
                     <form id="regForm">
                         <div class="row g-3">
                             <div class="col-md-6">
@@ -132,16 +135,57 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function openReg(name) {
-            document.getElementById('targetProgram').value = name;
-            document.getElementById('registration-section').scrollIntoView({ behavior: 'smooth' });
+            var targetField = document.getElementById('targetProgram');
+            var regSection = document.getElementById('registration-section');
+
+            if (!targetField || !regSection) {
+                console.error('Registration form elements not found on the page.');
+                alert('Registration form is currently unavailable. Please try the Contact page instead.');
+                return;
+            }
+
+            targetField.value = name;
+            regSection.scrollIntoView({ behavior: 'smooth' });
         }
 
-        document.getElementById('regForm').onsubmit = function(e) {
-            e.preventDefault();
-            this.classList.add('d-none');
-            document.getElementById('successMsg').classList.remove('d-none');
-            window.scrollTo({ top: document.getElementById('successMsg').offsetTop - 100, behavior: 'smooth' });
-        };
+        var regForm = document.getElementById('regForm');
+        if (regForm) {
+            regForm.onsubmit = function(e) {
+                e.preventDefault();
+
+                var successMsg = document.getElementById('successMsg');
+                var errorMsg = document.getElementById('errorMsg');
+
+                if (!successMsg) {
+                    console.error('Success message element not found.');
+                    return;
+                }
+
+                // Hide any previous error
+                if (errorMsg) {
+                    errorMsg.classList.add('d-none');
+                }
+
+                // Validate that a target program is selected
+                var targetProgram = document.getElementById('targetProgram');
+                if (!targetProgram || !targetProgram.value.trim()) {
+                    if (errorMsg) {
+                        errorMsg.textContent = 'Please select a program from the table above before submitting.';
+                        errorMsg.classList.remove('d-none');
+                        errorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    } else {
+                        alert('Please select a program from the table above before submitting.');
+                    }
+                    return;
+                }
+
+                this.classList.add('d-none');
+                successMsg.classList.remove('d-none');
+                window.scrollTo({ top: successMsg.offsetTop - 100, behavior: 'smooth' });
+            };
+        } else {
+            console.error('Registration form (#regForm) not found in the document.');
+        }
     </script>
 </body>
 </html>
