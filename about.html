@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Ethio Excellence Academy</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap"
         rel="stylesheet">
@@ -40,6 +41,21 @@
             border-bottom: 5px solid var(--accent-gold);
             text-align: center;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        /* የሶሻል ሚዲያ አይኮኖች ስታይል */
+        .social-links a {
+            color: white;
+            font-size: 26px;
+            margin: 0 12px;
+            transition: 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-gold);
+            transform: translateY(-5px);
         }
 
         footer {
@@ -106,11 +122,21 @@
 
     <footer>
         <div class="container">
-            <h3 class="fw-bold mb-3">ETHIO EXCELLENCE ACADEMY</h3>
+            <h3 class="fw-bold mb-4">ETHIO EXCELLENCE ACADEMY</h3>
+            <div class="social-links mb-4">
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://t.me/"><i class="fab fa-telegram-plane"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+            </div>
+
             <p class="small opacity-50 px-5">Integrity. Innovation. Excellence.</p>
             <p class="small mb-0 text-white-50">&copy; 2026 Ethio Excellence. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
