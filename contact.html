@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration - Ethio Excellence Academy</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@700;800&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary-bg: #0a192f;
@@ -23,6 +26,12 @@
             background-color: var(--primary-bg) !important;
             border-bottom: 2px solid var(--accent-gold);
             padding: 12px 0;
+        }
+
+        .navbar-brand {
+            font-family: 'Montserrat';
+            font-weight: 800;
+            color: #fff !important;
         }
 
         .contact-header {
@@ -86,11 +95,26 @@
             margin-bottom: 20px;
         }
 
+        /* የሶሻል ሚዲያ አይኮኖች ስታይል */
+        .social-links a {
+            color: white;
+            font-size: 26px;
+            margin: 0 12px;
+            transition: 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-gold);
+            transform: translateY(-5px);
+        }
+
         footer {
             background: var(--primary-bg);
             color: white;
-            padding: 30px 0;
-            margin-top: 50px;
+            padding: 60px 0;
+            margin-top: 60px;
             text-align: center;
         }
     </style>
@@ -98,7 +122,21 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-        <div class="container"><a class="navbar-brand fw-bold" href="#">ETHIO ACADEMY</a></div>
+        <div class="container">
+            <a class="navbar-brand" href="index.html">ETHIO ACADEMY</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white px-3" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white px-3" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link text-white px-3" href="course.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link text-white px-3 active" href="Contact.html"
+                            style="color: var(--accent-gold) !important;">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <section class="contact-header">
@@ -168,7 +206,25 @@
             </div>
         </div>
     </div>
-    <button class="btn btn-gold mt-4 shadow" onclick="window.location.href='index.html'">BACK TO HOME</button>
+
+    <div class="text-center">
+        <button class="btn btn-gold mt-4 shadow mb-5" style="width: auto; padding: 15px 50px;"
+            onclick="window.location.href='index.html'">BACK TO HOME</button>
+    </div>
+
+    <footer>
+        <div class="container">
+            <h3 class="fw-bold mb-4">ETHIO EXCELLENCE ACADEMY</h3>
+            <div class="social-links mb-4">
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://t.me/"><i class="fab fa-telegram-plane"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="small opacity-50">© 2026 Ethio Academy. Addis Ababa, Ethiopia.</p>
+        </div>
+    </footer>
 
     <script>
         document.getElementById('regForm').onsubmit = function (e) {
@@ -179,7 +235,8 @@
             const newStudent = {
                 name: document.getElementById('fullName').value,
                 grade: document.getElementById('grade').value,
-                stream: document.getElementById('stream').value
+                stream: document.getElementById('stream').value,
+                date: new Date().toLocaleString()
             };
             students.push(newStudent);
             localStorage.setItem('eea_students', JSON.stringify(students));
@@ -195,6 +252,7 @@
             successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
         };
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
